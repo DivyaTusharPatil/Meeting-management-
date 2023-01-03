@@ -1,0 +1,41 @@
+<form class="container" [formGroup]="SingupForm">
+    <h1><b>Sing-up Form</b></h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" name="name" />
+        <mat-error *ngIf="!SingupForm.controls['name'].valid && SingupForm.controls['name']?.touched">Name is
+            required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>User Name</mat-label>
+        <input matInput type="text" formControlName="username" name="username" />
+        <mat-error *ngIf="!SingupForm.controls['username'].valid && SingupForm.controls['username']?.touched">User name
+            is
+            required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [type]="hide ? 'password' : 'text'" formControlName="password" name="password" />
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error *ngIf="!SingupForm.controls['password'].valid && SingupForm.controls['password']?.touched">password
+            is
+            required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" [type]="hide ? 'cpassword' : 'text'" formControlName="cpassword" name="cpassword" />
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error *ngIf="!SingupForm.controls['cpassword'].valid && SingupForm.controls['cpassword']?.touched">
+            confirm password is required</mat-error>
+    </mat-form-field>
+
+    <button [disabled]="!SingupForm.valid" mat-raised-button color="primary"  (click)="SingupFormData()"  type="Register">
+        Sing-up</button><br><br>
+
+    
+
+
+</form>

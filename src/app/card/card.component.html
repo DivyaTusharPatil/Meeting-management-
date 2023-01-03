@@ -1,0 +1,11 @@
+<mat-card  *ngIf="data" class="example-card">
+    <mat-icon class="back" (click)="onclick()">reply</mat-icon>
+    <mat-card-title class="title">Details</mat-card-title>
+    <p>ID: {{data.id}}</p>
+    <p>Subject: {{data.subject}} </p>
+    <p>Attendees:{{getAttendees(data.attendees)}}</p>
+    <p>Date/Time: {{data.datetime}}</p>
+    <p>Location: {{data.location}}</p>
+    <p>Agenda: {{data.agenda}}</p> 
+    
+</mat-card>

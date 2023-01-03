@@ -1,0 +1,352 @@
+{
+  "user": [
+    {
+      "subject": "Demo 3",
+      "datetime": "2022-12-06T01:07",
+      "location": "Nashik",
+      "agenda": "Demo for Meeting Manager 3",
+      "attendees": [],
+      "id": 3
+    },
+    {
+      "subject": "Demo",
+      "datetime": "2022-11-16T21:05",
+      "location": "Nashik",
+      "agenda": "Demo for Meeting Manager 2",
+      "attendees": [],
+      "id": 4
+    },
+    {
+      "subject": "Demo 3",
+      "datetime": "2022-11-16T19:48",
+      "location": "Mumbai",
+      "agenda": "Demo for Meeting Manager 4",
+      "attendees": [],
+      "id": 5
+    },
+    {
+      "subject": "Demo 4",
+      "datetime": "2022-11-15T01:00",
+      "location": "Pune",
+      "agenda": "Demo for Meeting Manager 3",
+      "attendees": [
+        "1",
+        "2"
+      ],
+      "id": 6
+    },
+    {
+      "subject": "Demo",
+      "datetime": "2022-11-16T19:48",
+      "location": "Pune",
+      "agenda": "Demo for Meeting",
+      "attendees": [],
+      "id": 7
+    },
+    {
+      "subject": "Demo 2",
+      "datetime": "2022-11-16T19:48",
+      "location": "Mumbai",
+      "agenda": "Demo for Meeting Manager 3",
+      "attendees": [
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 5,
+          "attendeeName": "Swati",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": true
+        }
+      ],
+      "id": 12
+    },
+    {
+      "subject": "Demo 2",
+      "datetime": "2022-11-16T19:48",
+      "location": "Nashik",
+      "agenda": "Demo for Meeting Manager 2",
+      "attendees": [
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 2,
+          "attendeeName": "Tushar",
+          "isOrganizer": true
+        }
+      ],
+      "id": 13
+    },
+    {
+      "subject": "web development",
+      "datetime": "2022-11-16T23:14",
+      "location": "Pune",
+      "agenda": "meeting details",
+      "attendees": [
+        "1"
+      ],
+      "id": 19
+    },
+    {
+      "subject": "Demo",
+      "datetime": "2022-11-30T13:17",
+      "location": "Nashik",
+      "agenda": "Conference call",
+      "attendees": [
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 3,
+          "attendeeName": "Yogesh",
+          "isOrganizer": true
+        },
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        }
+      ],
+      "id": 20
+    },
+    {
+      "subject": "web devlopment",
+      "datetime": "2022-11-29T13:18",
+      "location": "Nashik",
+      "agenda": "call",
+      "attendees": [
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 5,
+          "attendeeName": "Swati",
+          "isOrganizer": true
+        },
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        }
+      ],
+      "id": 21
+    },
+    {
+      "subject": "Demo 2",
+      "datetime": "2022-11-29T13:21",
+      "location": "Nashik",
+      "agenda": "Conference call",
+      "attendees": [
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 2,
+          "attendeeName": "Tushar",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 3,
+          "attendeeName": "Yogesh",
+          "isOrganizer": true
+        }
+      ],
+      "id": 22
+    },
+    {
+      "subject": "Presentation",
+      "datetime": "2022-12-01T11:30",
+      "location": "Pune",
+      "agenda": "test",
+      "attendees": [
+        "2",
+        "3"
+      ],
+      "id": 23
+    },
+    {
+      "subject": "test",
+      "datetime": "2022-12-01T12:30",
+      "location": "Pune",
+      "agenda": "test",
+      "attendees": [
+        {
+          "attendeeId": 2,
+          "attendeeName": "Tushar",
+          "isOrganizer": true
+        }
+      ],
+      "id": 24
+    },
+    {
+      "subject": "Demo",
+      "datetime": "2022-12-30T11:29",
+      "location": "Pune",
+      "agenda": "Conferrence",
+      "attendees": [
+        {
+          "attendeeId": 3,
+          "attendeeName": "Yogesh",
+          "isOrganizer": true
+        }
+      ],
+      "id": 25
+    },
+    {
+      "subject": "web devlopment",
+      "datetime": "2022-12-30T11:40",
+      "location": "Pune",
+      "agenda": "Call",
+      "attendees": [
+        {
+          "attendeeId": 1,
+          "attendeeName": "Divya",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 2,
+          "attendeeName": "Tushar",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 5,
+          "attendeeName": "Swati",
+          "isOrganizer": true
+        }
+      ],
+      "id": 26
+    },
+    {
+      "subject": "web devlopment",
+      "datetime": "2023-01-07T11:55",
+      "location": "Nashik",
+      "agenda": "Conference",
+      "attendees": [
+        {
+          "attendeeId": 4,
+          "attendeeName": "Madhuri",
+          "isOrganizer": false
+        },
+        {
+          "attendeeId": 5,
+          "attendeeName": "Swati",
+          "isOrganizer": true
+        }
+      ],
+      "id": 27
+    },
+    {
+      "subject": "Demo 2",
+      "datetime": "2022-12-01T12:56",
+      "location": "Mumbai",
+      "agenda": "Test Call",
+      "attendees": [
+        "1",
+        "2"
+      ],
+      "id": 28
+    },
+    {
+      "subject": "web devlopment",
+      "datetime": "2022-12-01T12:58",
+      "location": "Mumbai",
+      "agenda": "Call",
+      "attendees": [
+        "3",
+        "5"
+      ],
+      "id": 29
+    },
+    {
+      "subject": "Demo",
+      "datetime": "2022-12-01T13:04",
+      "location": "Pune",
+      "agenda": "conference call",
+      "attendees": [
+        "1",
+        "5"
+      ],
+      "id": 30
+    },
+    {
+      "subject": "web devlopment",
+      "datetime": "2022-12-01T14:10",
+      "location": "Pune",
+      "agenda": "Test",
+      "attendees": [
+        "1",
+        "5"
+      ],
+      "id": 31
+    },
+    {
+      "subject": "Demo 2",
+      "datetime": "2022-12-02T14:07",
+      "location": "Nashik",
+      "agenda": "Conference",
+      "attendees": [
+        "2",
+        "3",
+        "5"
+      ],
+      "id": 32
+    }
+  ],
+  "login": [
+    {
+      "username": "Divya",
+      "password": "Divya",
+      "name": "Divya",
+      "id": 1
+    },
+    {
+      "username": "Tushar",
+      "password": "Tushar",
+      "name": "Tushar",
+      "id": 2
+    },
+    {
+      "username": "Yogesh",
+      "password": "Yogesh",
+      "name": "Yogesh",
+      "id": 3
+    },
+    {
+      "username": "Madhuri",
+      "password": "Madhuri",
+      "name": "Madhuri",
+      "id": 4
+    },
+    {
+      "username": "Swati",
+      "password": "Swati",
+      "name": "Swati",
+      "id": 5
+    }
+  ]
+}

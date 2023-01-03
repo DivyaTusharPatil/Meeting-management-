@@ -1,0 +1,66 @@
+body{
+    background-color: red;
+    margin: 0;
+    
+    
+}
+
+.navbar-expand-lg{
+    white-space: nowrap;
+    display: flex;
+    width: 100%; 
+    height: 50px;
+    padding: 4px;
+    justify-self: center; 
+    background-color: rgb(184, 58, 58);
+    color: white; 
+    font-weight: 500;
+    align-items: center;
+    line-height: 100%;
+    
+    
+
+     
+}
+.btn-outline-success{
+    position: absolute;
+    margin-left: 800px;
+    margin-bottom: 130px;
+   top: 6px; 
+}
+.form-control{
+ position: relative;
+margin-top: 30px;
+margin-left: 280px;
+bottom: 15px;
+padding: 5px;
+}
+
+.d-block{
+    
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 0;
+    margin: 0;
+    display: block;
+
+    
+}
+
+footer{
+    background-color: #424558;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 35px;
+     text-align: center;
+     color: #CCC;
+ }
+ 
+ footer p {
+     padding: 10.5px;
+     margin: 0px;
+     line-height: 100%;
+ }

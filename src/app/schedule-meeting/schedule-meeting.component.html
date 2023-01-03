@@ -1,0 +1,66 @@
+<div class="card">
+    <h4 class="header"><strong>Schedule Meeting</strong></h4>
+    <div class="login-form">
+        <form>
+            <div class="form-group">
+                <label for="subject"><b>Subject:</b></label>
+
+                <input type="text" formControlName="subject" class="form-control" placeholder="Enter subject" />
+            </div><br>
+
+
+            <div class="form-group">
+                <label for="agenda"><b>Agenda:</b></label>
+                <textarea type="text" formControlName="agenda" class="form-control"
+                    placeholder="Enter agenda"></textarea>
+            </div><br>
+
+            <div class="form-group">
+                <label for="schdatetime"><b>Schedule date time:</b></label>
+                <input type="text" formControlName="schdatetime" class="form-control"
+                    placeholder="Enter schedulel date time" />
+            </div><br>
+
+
+           <div class="form-group">
+                <label for="attendees"><b>Attendees:</b></label>
+                <select type="text" formControlName="attendees" class="form-control">
+                   <!--<option value="">Please select a Attendees </option>
+                    <option *ngFor="let attendees  of attendees" [value]="attendees">{{ attendees }}</option>-->
+                </select>
+            </div><br>
+
+            <div class="form-group">
+                <label for="location"><b>Location:</b></label>
+                <select type="text" formControlName="location" class="form-control">
+                    <option></option>
+                    <option value="Akurdi">Akurdi</option>
+                    <option value="Nigdi" *ngIf="show">Nigdi</option>
+                    <option value="Baner">Baner</option>
+                </select> 
+            </div><br>
+
+           <div class="form-group">
+            <label for="location"><b>Location:</b></label>
+            <select type="text" formControlName="location" class="form-control" *ngFor="let area of city">
+                <option *ngIf="show">{{area.location}}</option>
+            </select>
+        </div>
+
+            <!--<tr *ngFor="let region of regions" *ngIf="region.sales > 200">    
+                <td>{{region.region}}</td>
+                <td>{{region.regionalManager}}</td>               
+                <td>{{region.sales}}</td>
+              </tr>-->
+
+         <mat-checkbox (click)="onchange($event)">There is no change in checker.</mat-checkbox>
+
+            <button type="button" (click)="scheduleMeeting()" class="btn btn-primary" value="Re-Schedule Meeting">
+                Re-Schedule Meeting</button>
+
+            <button type="button" class="btn btn-secondary reset" value="Reset">Reset</button>
+
+
+        </form>
+    </div>
+</div>

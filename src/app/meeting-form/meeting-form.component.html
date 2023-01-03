@@ -1,0 +1,59 @@
+<form class="container" [formGroup]="RegisterForm">
+    <mat-icon class="back" (click)="onclick()">reply</mat-icon>
+    
+    <h1><b>Meeting Details</b></h1>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Subject</mat-label>
+        <input matInput type="text" formControlName="Subject" name="Subject" />
+        <mat-error *ngIf="!RegisterForm.controls['Subject'].valid && RegisterForm.controls['Subject']?.touched">Subject
+            is <strong>required</strong></mat-error>
+    </mat-form-field><br />
+    <mat-form-field appearance="outline">
+        <mat-label>Date/Time</mat-label>
+        <input matInput type="datetime-local" [min]="mindate" formControlName="Datetime" name="Datetime" />
+        <mat-error *ngIf="!RegisterForm.controls['Datetime'].valid && RegisterForm.controls['Datetime']?.touched">
+            Meeting date and time is <strong>required</strong></mat-error>
+    </mat-form-field><br />
+
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Location</mat-label>
+        <mat-select formControlName="Location" name="location">
+            <mat-option value="Mumbai">Mumbai</mat-option>
+            <mat-option value="Pune">Pune</mat-option>
+            <mat-option value="Nashik">Nashik</mat-option>
+
+        </mat-select>
+        <mat-error *ngIf="!RegisterForm.controls['Location'].valid && RegisterForm.controls['Location']?.touched">
+            Location is <strong>required</strong></mat-error>
+    </mat-form-field><br />
+    <mat-form-field appearance="outline">
+        <mat-label>Agenda</mat-label>
+        <textarea matInput formControlName="Agenda" name="Agenda"></textarea>
+        <mat-error *ngIf="!RegisterForm.controls['Agenda'].valid && RegisterForm.controls['Agenda']?.touched">
+            Agenda is <strong>required</strong>
+        </mat-error>
+    </mat-form-field><br />
+
+    <mat-form-field appearance="outline">
+        <mat-label>Attendees</mat-label>
+        <mat-select formControlName="Attendees" name="Attendees"  multiple [(value)]="attendees">
+            <mat-option value="1" [disabled]="isCurrentUser(1)">Divya</mat-option>
+            <mat-option value="2" [disabled]="isCurrentUser(2)">Tushar</mat-option>
+            <mat-option value="3" [disabled]="isCurrentUser(3)">Yogesh</mat-option>
+            <mat-option value="4" [disabled]="isCurrentUser(4)">Madhuri</mat-option>
+            <mat-option value="5" [disabled]="isCurrentUser(5)">Swati</mat-option>
+        </mat-select>
+        <mat-error *ngIf="!RegisterForm.controls['Attendees'].valid && RegisterForm.controls['Attendees']?.touched">
+            Attendees is <strong>required</strong>
+        </mat-error>
+    </mat-form-field><br />
+
+
+    <button mat-raised-button color="primary" [disabled]="!RegisterForm.valid" (click)="RegisterFormData()"
+        type="Register">
+        Register</button>
+
+</form>

@@ -1,0 +1,167 @@
+<div class="fixed-top">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span class="align-content">Meeting Details</span>
+  	
+      <button mat-raised-button class="Profile"
+        matTooltip="{{currentUserName.name}}"
+        matTooltipClass="example-tooltip-red1"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        <mat-icon>face</mat-icon> Profile
+</button>
+  <div class="log">
+  <button mat-raised-button color="white" routerLink="/login">Logout</button>
+</div>&nbsp;
+   
+  </mat-toolbar>
+  
+    
+  <!-- "profile" menu -->
+
+  <!-- profile view end  -->
+
+  <!-- <div class="heading">
+  <h1><b>Meeting Details</b></h1>
+</div> -->
+  <mat-tab-group class="tab" (selectedTabChange)="getMeetingDetails($event)">
+
+    <mat-tab label="My Meeting">
+
+
+      <div class="example-container mat-elevation-z8">
+
+        <mat-table #table [dataSource]="dataSource">
+
+
+          <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef>ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="subject">
+            <mat-header-cell *matHeaderCellDef>Subject</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.subject}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="attendees">
+            <mat-header-cell *matHeaderCellDef>Attendees</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{getAttendees(element.attendees)}} </mat-cell>
+          </ng-container>
+
+          
+
+          <ng-container matColumnDef="datetime">
+            <mat-header-cell *matHeaderCellDef> Date/Time </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.datetime}} </mat-cell>
+          </ng-container>
+
+
+          <ng-container matColumnDef="location">
+            <mat-header-cell *matHeaderCellDef>Location</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.location}} </mat-cell>
+          </ng-container>
+
+
+          <ng-container matColumnDef="agenda">
+            <mat-header-cell *matHeaderCellDef>Agenda</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.agenda}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="edit">
+            <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <button mat-mini-fab color="primary" (click)="edit(element.id)"
+                aria-label="Example icon button with a filter list icon">
+                <mat-icon>edit</mat-icon>
+              </button></mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+            <mat-cell *matCellDef="let element"><button mat-mini-fab color="warn" (click)="delete(element.id)"
+                aria-label="Example icon button with a filter list icon">
+                <mat-icon>delete</mat-icon>
+              </button></mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="myMeetingDisplayColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: myMeetingDisplayColumns;"></mat-row>
+        </mat-table>
+      </div>
+    </mat-tab>
+    <mat-tab label="Shedule Meeting" (click)="getScheduleMeetings()">
+
+
+      <div class="example-container mat-elevation-z8">
+
+        <mat-table #table [dataSource]="dataSource">
+
+
+          <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef>ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="subject">
+            <mat-header-cell *matHeaderCellDef>Subject</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.subject}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="attendees">
+            <mat-header-cell *matHeaderCellDef>Attendees</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{getAttendees(element.attendees)}} </mat-cell>
+          </ng-container>
+
+          <!--<ng-container matColumnDef="organizer">
+            <mat-header-cell *matHeaderCellDef>Organizer</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.organizer}} </mat-cell>
+          </ng-container>-->
+
+          <ng-container matColumnDef="datetime">
+            <mat-header-cell *matHeaderCellDef> Date/Time </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.datetime}} </mat-cell>
+          </ng-container>
+
+
+          <ng-container matColumnDef="location">
+            <mat-header-cell *matHeaderCellDef>Location</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.location}} </mat-cell>
+          </ng-container>
+
+
+          <ng-container matColumnDef="agenda">
+            <mat-header-cell *matHeaderCellDef>Agenda</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.agenda}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="details">
+            <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <button mat-mini-fab color="primary" (click)="details(element.id)"
+                aria-label="Example icon button with a filter list icon">
+                <mat-icon>description</mat-icon>
+              </button></mat-cell>
+          </ng-container>
+
+         
+
+          <mat-header-row *matHeaderRowDef="scheduledDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: scheduledDisplayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+</div>

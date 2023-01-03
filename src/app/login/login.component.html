@@ -1,0 +1,25 @@
+<form class="box" [formGroup]="LoginForm">
+    <h1 class="name"><b>Login Form</b></h1>
+    <mat-form-field appearance="outline">
+        <mat-label>User Name</mat-label>
+        <input matInput type="text" formControlName="username" name="username" />
+        <mat-icon matSuffix> account_circle </mat-icon>
+        <mat-error *ngIf="!LoginForm.controls['username'].valid && LoginForm.controls['username']?.touched">
+            User name is <strong>required</strong>
+        </mat-error>
+    </mat-form-field><br/>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [type]="hide ? 'password' : 'text'" formControlName="password" name="password">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error *ngIf="!LoginForm.controls['password'].valid && LoginForm.controls['password']?.touched">
+            Password is <strong>required</strong>
+        </mat-error>
+        
+    </mat-form-field><br/>
+    <mat-error *ngIf="isValid">Invalid Credentials </mat-error>
+   
+    <button mat-raised-button color="primary" [disabled]="!LoginForm.valid"  (click)="onlogin()">Login</button> 
+
+</form>

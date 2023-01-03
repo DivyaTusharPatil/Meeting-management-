@@ -1,0 +1,27 @@
+.header{
+    font-size: x-large;
+    text-align: center;
+}
+.card{
+    display: flex;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    padding: 30px;
+    border: solid 1px;
+
+}
+.form-group{
+    text-align: left;
+    
+}
+.form-control{
+height: 50px;
+width: 100%;
+}
+.btn{
+    height: 50px;
+    width: 50%;
+}
+
+

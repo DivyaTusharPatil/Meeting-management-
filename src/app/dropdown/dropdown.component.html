@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    Binding to dropdown
+  </mat-toolbar>
+  
+  
+  <mat-form-field style="margin:50px;">
+    <mat-select placeholder="Favorite food" [(ngModel)]="selectedFood" (ngModelChange)="onFoodSelection()">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+         {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <input value="{{result}}">
+  <div style="height:200px;"> </div>
+  <mat-toolbar color="primary">
+    {{output}}
+  </mat-toolbar>
+  

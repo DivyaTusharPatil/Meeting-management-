@@ -1,0 +1,26 @@
+
+.box{
+    text-align: center;
+    width: 35%;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 450px;
+    margin-right: 400px;
+    padding: 40px;
+    border: solid 1px; 
+    
+} 
+
+
+.name{
+    margin-top: 10px;
+}
+
+.mat-form-field{
+    width: 80%;
+    padding: 2px;
+}
+
+.mat-raised-button{
+    width: 50%;
+}

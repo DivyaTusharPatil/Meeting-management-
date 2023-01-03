@@ -1,0 +1,28 @@
+
+<input type="text" [disabled]="enable"  id="" [value]="Name"/><br><br>
+
+<select>
+  <!--option value="Value-1">Value-1</option>
+  <option value="Value-2">Value-2</option-->
+    <option >{{value}}</option></select>
+  
+<br>
+<mat-checkbox>There is no change in checker.</mat-checkbox>
+  
+  <img [src]="url" alt=""><br><br>
+  <button value="Laptop" (click)="onAddcard($event)">Laptop</button>
+
+  <button value="Mobile" (click)="onAddcard($event)">Mobile</button>
+
+  <button value="Watch" (click)="onAddcard($event)">Watch</button><br><br>
+
+    <p>{{msg}}</p>
+    <h1 style="color: blue;">Heading</h1>
+
+    <h1 [style.color]="'red'">Heading</h1>
+   
+    <h1 [style.color]="color" >Heading</h1>
+
+    <button (click)="updatecolor()">Update Color</button>
+
+    

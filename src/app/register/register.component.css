@@ -1,0 +1,22 @@
+
+.container{
+    text-align: center;
+    width: 40%;
+    height: 500px;
+    margin: auto;       
+    padding: 20px;
+    border: solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mat-form-field{
+    text-align: left;
+    width: 80%;
+    font-size: medium;
+    padding: 2px;
+}
+
+.mat-raised-button{
+    width: 50%;
+}
+ 
