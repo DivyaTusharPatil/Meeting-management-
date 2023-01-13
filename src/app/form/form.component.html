@@ -34,6 +34,15 @@
                 </span>
               </div>
 
+              <div class="form-outline form-black mb-4">
+                <label class="form-label" for="typePasswordX">Client Dp ID</label>
+                <input formControlName="clientdpid" id="typenumberX" 
+                 class="form-control form-control-lg" value={{displayval}} [(ngModel)]="data"  (change)="onInput($event)" type="text" required minlength="8" maxlength="8" size="8"/>
+                <span *ngIf="!loginForm.controls['clientdpid'].valid && loginForm.controls['clientdpid']?.touched" class="alert alert-danger">
+                  Please Enter Your Client Dp ID
+                </span>
+              </div>
+
               <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Forgot password?</a></p>
 
               <button class="btn btn-primary" [disabled]="!loginForm.valid" (click)="submitFormData()" type="submit">Login</button>

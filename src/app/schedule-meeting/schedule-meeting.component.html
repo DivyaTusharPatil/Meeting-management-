@@ -1,7 +1,7 @@
 <div class="card">
     <h4 class="header"><strong>Schedule Meeting</strong></h4>
     <div class="login-form">
-        <form>
+        <form #userform="ngForm" (ngSubmit)="getuserformdata(userform.value)">
             <div class="form-group">
                 <label for="subject"><b>Subject:</b></label>
 
@@ -30,22 +30,29 @@
                 </select>
             </div><br>
 
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="location"><b>Location:</b></label>
                 <select type="text" formControlName="location" class="form-control">
                     <option></option>
                     <option value="Akurdi">Akurdi</option>
                     <option value="Nigdi" *ngIf="show">Nigdi</option>
                     <option value="Baner">Baner</option>
-                </select> 
+                </select>
             </div><br>
 
            <div class="form-group">
             <label for="location"><b>Location:</b></label>
-            <select type="text" formControlName="location" class="form-control" *ngFor="let area of city">
-                <option *ngIf="show">{{area.location}}</option>
+            <select  name="city" type="text" formControlName="location" class="form-control" >
+                <option *ngFor="let area of city" [ngValue]="area" >{{area}}</option>
             </select>
-        </div>
+        </div><br>-->
+
+        <div class="form-group">
+            <label for="location"><b>Location:</b></label>
+            <select  name="city" type="text" formControlName="location" class="form-control" >
+                <option></option>
+            </select>
+        </div><br>
 
             <!--<tr *ngFor="let region of regions" *ngIf="region.sales > 200">    
                 <td>{{region.region}}</td>
@@ -53,12 +60,12 @@
                 <td>{{region.sales}}</td>
               </tr>-->
 
-         <mat-checkbox (click)="onchange($event)">There is no change in checker.</mat-checkbox>
+         <!--<mat-checkbox (click)="onchange($event)">There is no change in checker.</mat-checkbox>-->
 
             <button type="button" (click)="scheduleMeeting()" class="btn btn-primary" value="Re-Schedule Meeting">
                 Re-Schedule Meeting</button>
 
-            <button type="button" class="btn btn-secondary reset" value="Reset">Reset</button>
+            <!--<button type="button" class="btn btn-secondary reset" value="Reset">Reset</button>-->
 
 
         </form>

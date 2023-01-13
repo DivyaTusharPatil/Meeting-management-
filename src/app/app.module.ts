@@ -30,7 +30,6 @@ import { CustompipePipe } from './custompipe.pipe';
 import { SingInComponent } from './sing-in/sing-in.component';
 import { ScheduleMeetingComponent } from './schedule-meeting/schedule-meeting.component';
 import { MeetingComponent } from './meeting/meeting.component';
-
 @NgModule({
   declarations: [
     AppComponent,
